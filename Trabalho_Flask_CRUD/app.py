@@ -6,13 +6,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def principal():
-	banco = sqlite3.connect('venda.db')
-	cursor = banco.cursor()
-
-	cursor.execute('SELECT * FROM produto')
-	data = cursor.fetchall()
-    #print(con.fetchall())
-
 	return render_template('home.html')
 
 @app.route("/produtos")
