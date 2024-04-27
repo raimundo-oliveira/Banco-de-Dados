@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: #e63434;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .product-item {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .product-item h2 {
+            margin-top: 0;
+        }
+        .product-item p {
+            margin-bottom: 5px;
+        }
+        .btn {
+            background-color: #af4c4c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #5c0f0f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dados do Produto</h1>
+    </header>
+
+    <p><strong>ID: </strong> {{produto[0]}}</p>
+    <hr>
+    <p><strong>Nome: </strong> {{produto[1]}}</p>
+    <hr>
+    <p><strong>Descrição: </strong> {{produto[2]}}</p>
+    <hr>
+    <p><strong>Categoria: </strong> {{produto[3]}}</p>
+    <hr>
+    <p><strong>Marca: </strong> {{produto[4]}}</p>
+    <hr>
+    <p><strong>Preço: </strong> {{produto[5]}}</p>
+    <hr>
+    <p><strong>Estoque: </strong> {{produto[6]}}</p>
+    <hr>
+    <a href="{{url_for('vendas')}}">
+        <button class="btn" :hover>Voltar</button>
+    </a>
+
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: #e63434;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .product-item {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .product-item h2 {
+            margin-top: 0;
+        }
+        .product-item p {
+            margin-bottom: 5px;
+        }
+        .btn {
+            background-color: #af4c4c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #5c0f0f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dados do Produto</h1>
+    </header>
+    <form action="/editarProduto/{{produto[0]}}" method="Post">
+        <strong>Nome: </strong> <br><input type="text" name="nome" value="{{produto[1]}}"><br><br>
+        <strong>Descrição: </strong> <br><input type="text" name="descricao" value="{{produto[2]}}"><br><br>
+        <strong>Categoria: </strong> <br><input type="text" name="categoria" value="{{produto[3]}}"><br><br>
+        <strong>Marca: </strong> <br><input type="text" name="marca" value="{{produto[4]}}"><br><br>
+        <strong>Preço: </strong> <br><input type="text" name="preco" value="{{produto[5]}}"><br><br>
+        <strong>Estoque: </strong> <br><input type="text" name="estoque" value="{{produto[6]}}"><br><br>
+        <input type="submit" value="Editar">
+    </form>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadinho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header {
+            background-color: #e63434;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .product-item {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .product-item h2 {
+            margin-top: 0;
+        }
+        .product-item p {
+            margin-bottom: 5px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #af4c4c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #5c0f0f;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Raimundo Eletrônicos</h1>
+    </header>
+    <div class="container">
+        <ul class="product-list">
+            <li class="product-item">
+                <h2>Clientes</h2>
+                <a href="{{url_for('add_usuario')}}" class="button">Cadastro de Cliente</a>
+                <a href="{{url_for('clientes')}}" class="button">Lista de Clientes</a>
+            </li>
+            <li class="product-item">
+                <h2>Produtos</h2>
+                <a href="{{url_for('add_produto')}}" class="button">Inserir Produto</a>
+                <a href="{{url_for('produtos')}}" class="button">Lista de Produtos</a>
+            </li>
+            <li class="product-item">
+                <h2>Vendas</h2>
+                <a href="{{url_for('compra')}}" class="button">Cadastro de Venda</a>
+                <a href="{{url_for('vendas')}}" class="button">Lista de Vendas</a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+
